@@ -48,7 +48,7 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
   # added for Heroku no support
-  gem 'sqlite3'
+  gem 'sqlite3', '1.3.13'
 end
 
 group :development do
