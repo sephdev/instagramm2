@@ -21,5 +21,6 @@
                 = @pic.get_upvotes.size
 
               - if user_signed_in?
-                = link_to "Edit", edit_pic_path, class: "btn btn-info"
-                = link_to "Delete", pic_path, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"
+                - if @pic.user_id == current_user.id
+                  = link_to "Edit", edit_pic_path, class: "btn btn-info"
+                  = link_to "Delete", pic_path, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"
